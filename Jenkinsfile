@@ -6,13 +6,13 @@ pipeline {
         stage('Build with maven') {
             steps {
           
-                sh 'cd SampleWebApp && mvn clean install'
+                ssh 'cd mvn MywebApp && mvn clean install'
             }
         }
         
              stage('Test') {
             steps {
-                sh 'cd SampleWebApp && mvn test'
+                sh 'cd MywebApp && mvn test'
             }
         
             }
