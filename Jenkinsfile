@@ -6,7 +6,7 @@ pipeline {
         stage('Build with maven') {
             steps {
           
-                ssh 'cd mvn MywebApp && mvn clean install'
+                sh 'cd mvn MywebApp && mvn clean install'
             }
         }
         
